@@ -1,0 +1,27 @@
+Topic,Category, Chapter,Priority,Status
+Embedded,8051,Architecture,2,1
+Embedded,8051,Timers,2,0
+Embedded,8051,Counters,2,0
+Embedded,8051,LCD Interfacing,2,1
+Embedded,8051,DC motor Interfacing,2,0
+Embedded,Communication Protocols,"Serial(UART , CAN, USART)",2,0
+Embedded,Communication Protocols,"Parallel(I2C , SPI)",2,0
+Embedded,Embedded C,basic coding,2,0
+Embedded,Embedded C,Coding to 8051,2,0
+Embedded,Assembly,basic coding,2,0
+Embedded,Assembly,Coding to UC,2,0
+Python/Django/ML,Python,MultiThreading,1,0
+Python/Django/ML,Python,Buffer,1,0
+Python/Django/ML,Python,OOPS,1,0
+Python/Django/ML,DataScience,List of Plots to Browser,1,0
+Python/Django/ML,DataScience,Library Site,1,0
+Python/Django/ML,DataScience,"ML Algorithm(Train & Test with different algo's and plot at a time), and send those plots to browser",1,0
+Python/Django/ML,ML,Structured Data,1,0
+Python/Django/ML,ML,Unstructured Data,1,1
+DataStructures&Algo,DS,"Linked list , Arrays , Stacks , Queues ,Heaps",3,0
+DataStructures&Algo,DS,"Trees , Graphs",3,0
+DataStructures&Algo,Searching,"traversals in Array , Trees , Graphs. All search algorithms",3,0
+DataStructures&Algo,Algorithms,"BFS , DFS, Components Connected, ShortestPath",3,0
+Git,Local,Local,4,1
+Git,Pushing to Remote,Pushing to Remote,4,1
+Git,Merging,Merging,4,0
