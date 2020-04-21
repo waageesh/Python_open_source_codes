@@ -9,6 +9,9 @@ import sys , glob
 
 #define a list to add all pandas queries
 img_list = []
+fig_list = []
+images = []
+i = 0
 
 
 #load csv file into DataFrame
@@ -22,17 +25,35 @@ pandas_queries = [df.groupby('Category')['Status'].count() , df.groupby('Categor
 
 #plot and save those plots as images for all pnadas queries
 for query in pandas_queries:
-    i = 0
+    fig_list.append('fig_'+str(i))
+    fig_list[i] = plt.figure()
     query.plot.bar()
-    fig_1.savefig('media/abc_' + str(i) + '.png')
+    fig_list[i].savefig('media/abc_' + str(i) + '.png')
     i +=1
 
 #loop through all images and saving them as base64 string
 for img in glob.glob('media/*.png'):
     img = open(img , 'rb')
     img_list.append(base64.b64encode(img.read()))
-    
+
+#loop through all encoded img strings to parse them, that is understandable by html page
+for img in img_list:
+    images.append(urllib.parse.quote(img))
+
+# -------------------------
+# return all parsed images
+# return images    
+# -------------------------
 
 #check gengerated images exist or not
 print(len(img_list[0]) , len(img_list[1]) )
 print(img_list[0] == img_list[1] )
+
+# return saved img_list(encoded string format of images) to html page
+#def get(self, request):
+#    file_path = os.path.abspath('train.csv')
+#    list_of_files = glob.glob('/'.join( file_path.split('/')[0:-1])+str('/media')+str('/*')) # * means all if need specific format then *.csv
+#    latest_file_url = list_of_files
+#    img, img2, img3 =  self.plot_data(latest_file_url)
+#    return render(request , 'plot.html' , {'data' : img, 'data2' : img2, 'data3' : img3})
+
