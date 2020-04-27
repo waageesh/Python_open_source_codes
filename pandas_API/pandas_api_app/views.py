@@ -13,3 +13,5 @@ class CovidView(APIView):
         covid = Covid.objects.all()
         serializer = CovidSerializer(covid, many=True)
         return Response(serializer.data)
+
+        
